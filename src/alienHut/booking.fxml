@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alienHut.BookingController">
+    <stylesheets>
+        <URL value="@booking.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass">
+         <stylesheets>
+            <URL value="@customer_view.css" />
+         </stylesheets>
+         <children>
+            <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+               <top>
+                  <AnchorPane prefHeight="36.0" prefWidth="600.0" style="-fx-background-color: #05386B;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button layoutX="508.0" layoutY="7.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #edf5e1; -fx-padding: 3 10 3 30; -fx-cursor: hand;" text="Back" textFill="#05386b">
+                           <font>
+                              <Font name="SansSerif Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="15.0" fitWidth="18.0" layoutX="515.0" layoutY="11.0" style="-fx-cursor: hand;">
+                           <image>
+                              <Image url="@../image/back_icon.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="20.0" fitWidth="18.0" layoutX="252.0" layoutY="8.0" style="-fx-cursor: hand;">
+                           <image>
+                              <Image url="@../image/book.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="277.0" layoutY="9.0" text="Booking" textFill="#edf5e1">
+                           <font>
+                              <Font name="SansSerif Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <center>
+                  <AnchorPane prefHeight="108.0" prefWidth="600.0" style="-fx-background-color: #EDF5E1;" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="18.0" layoutX="245.0" layoutY="210.0" style="-fx-cursor: hand;">
+                           <image>
+                              <Image url="@../image/view_icon.png" />
+                           </image>
+                        </ImageView>
+                        <AnchorPane prefHeight="54.0" prefWidth="600.0" style="-fx-background-color: #5CDB95;">
+                           <children>
+                              <Label fx:id="title" layoutX="8.0" layoutY="6.0" text="Title" textFill="#edf5e1">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="name" layoutX="497.0" layoutY="19.0" maxWidth="150.0" text="name" textAlignment="RIGHT" textFill="#edf5e1">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="391.0" layoutY="19.0" text="Booking Person:" textAlignment="RIGHT" textFill="#edf5e1">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <HBox alignment="CENTER" layoutX="41.0" layoutY="62.0" prefHeight="36.0" prefWidth="268.0" spacing="10.0">
+                           <children>
+                              <Label text="Date: " textFill="#05386b">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="date" promptText="12/12/12" />
+                           </children>
+                        </HBox>
+                        <VBox layoutX="143.0" layoutY="194.0" prefHeight="102.0" prefWidth="314.0" spacing="30.0">
+                           <children>
+                              <HBox prefHeight="35.0" prefWidth="311.0" spacing="50.0">
+                                 <children>
+                                    <Button fx:id="b1" mnemonicParsing="false" onAction="#b1" style="-fx-background-color: #379683; -fx-text-fill: #EDF5E1; -fx-font-weight: bold; -fx-font-size: 15;" text="B1" />
+                                    <Button fx:id="b2" mnemonicParsing="false" onAction="#b2" style="-fx-background-color: #379683; -fx-text-fill: #EDF5E1; -fx-font-weight: bold; -fx-font-size: 15;" text="B2" />
+                                    <Button fx:id="b3" mnemonicParsing="false" onAction="#b3" style="-fx-background-color: #379683; -fx-text-fill: #EDF5E1; -fx-font-weight: bold; -fx-font-size: 15;" text="B3" />
+                                    <Button fx:id="b4" mnemonicParsing="false" onAction="#b4" style="-fx-background-color: #379683; -fx-text-fill: #EDF5E1; -fx-font-weight: bold; -fx-font-size: 15;" text="B4" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="35.0" prefWidth="311.0" spacing="50.0">
+                                 <children>
+                                    <Button fx:id="a1" mnemonicParsing="false" onAction="#a1" style="-fx-background-color: #379683; -fx-text-fill: #EDF5E1; -fx-font-weight: bold; -fx-font-size: 15;" text="A1" />
+                                    <Button fx:id="a2" mnemonicParsing="false" onAction="#a2" style="-fx-background-color: #379683; -fx-text-fill: #EDF5E1; -fx-font-weight: bold; -fx-font-size: 15;" text="A2" />
+                                    <Button fx:id="a3" mnemonicParsing="false" onAction="#a3" style="-fx-background-color: #379683; -fx-text-fill: #EDF5E1; -fx-font-weight: bold; -fx-font-size: 15;" text="A3" />
+                                    <Button fx:id="a4" mnemonicParsing="false" onAction="#a4" style="-fx-background-color: #379683; -fx-text-fill: #EDF5E1; -fx-font-weight: bold; -fx-font-size: 15;" text="A4" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Label layoutX="65.0" layoutY="235.0" text="Seats:" textFill="#05386b">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="252.0" layoutY="314.0" mnemonicParsing="false" onAction="#book_now" style="-fx-background-color: #05386B; -fx-text-fill: #EDF5E1; -fx-font-weight: bold; -fx-font-size: 15;" text="Book Now" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#379683" height="15.0" layoutX="487.0" layoutY="213.0" stroke="TRANSPARENT" strokeType="INSIDE" width="15.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cf142b" height="15.0" layoutX="487.0" layoutY="238.0" stroke="TRANSPARENT" strokeType="INSIDE" width="15.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d8d8d8" height="15.0" layoutX="487.0" layoutY="263.0" stroke="TRANSPARENT" strokeType="INSIDE" width="15.0" />
+                        <Label layoutX="510.0" layoutY="211.0" text="Available" textFill="#05386b">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="510.0" layoutY="236.0" text="Selected" textFill="#05386b">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="510.0" layoutY="261.0" text="Booked" textFill="#05386b">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="209.0" layoutY="111.0" mnemonicParsing="false" onAction="#seat_availability" style="-fx-background-color: #cf142b; -fx-text-fill: #EDF5E1; -fx-font-weight: bold; -fx-font-size: 15;" text="Check Seat Availability" />
+                        <HBox alignment="CENTER" layoutX="291.0" layoutY="62.0" prefHeight="36.0" prefWidth="268.0" spacing="10.0">
+                           <children>
+                              <Label text="Time:" textFill="#05386b">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="time" prefWidth="150.0" promptText="HH:MM" />
+                           </children>
+                        </HBox>
+                        <Line endX="161.0" endY="-1.52587890625E-5" layoutX="301.0" layoutY="161.0" startX="-165.4000244140625" startY="-1.52587890625E-5" />
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

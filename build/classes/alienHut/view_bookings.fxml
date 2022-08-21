@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="alienHut.View_bookingsController">
+    <stylesheets>
+        <URL value="@view_bookings.css" />
+    </stylesheets>
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <top>
+            <AnchorPane prefHeight="36.0" prefWidth="600.0" style="-fx-background-color: #EDF5E1;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="508.0" layoutY="7.0" mnemonicParsing="false" onAction="#back_button" style="-fx-background-color: #edf5e1; -fx-padding: 3 10 3 30; -fx-cursor: hand;" text="Back" textFill="#05386b">
+                     <font>
+                        <Font name="SansSerif Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="15.0" fitWidth="18.0" layoutX="515.0" layoutY="11.0" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@../image/back_icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="20.0" fitWidth="18.0" layoutX="234.0" layoutY="8.0" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@../image/booking_icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="259.0" layoutY="9.0" text="Your Bookings" textFill="#05386b">
+                     <font>
+                        <Font name="SansSerif Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <right>
+            <AnchorPane prefHeight="200.0" prefWidth="255.0" style="-fx-background-color: #8EE4AF;" BorderPane.alignment="CENTER" />
+         </right>
+         <left>
+            <AnchorPane prefHeight="364.0" prefWidth="600.0" style="-fx-background-color: #05386B;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="190.0" layoutY="172.0" prefHeight="130.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <Label text="Username" textFill="#05386b">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label text="First Name" textFill="#05386b">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label text="Last Name" textFill="#05386b">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="435.0" layoutY="325.0" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@../../../AlienHut/src/image/booking_icon1.png" />
+                     </image>
+                  </ImageView>
+                  <Line endX="100.0" endY="9.599990844726562" layoutX="189.0" layoutY="168.0" startX="100.0" startY="96.0" stroke="#05386b" />
+                  <Button layoutX="365.0" layoutY="310.0" mnemonicParsing="false" onAction="#delete_booking" style="-fx-background-color: #cf142b; -fx-text-fill: #EDF5E1; -fx-font-weight: bold; -fx-font-size: 15; -fx-padding: 4 16 4 32;" text="Cancel Selected Booking" />
+                  <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="374.0" layoutY="315.0" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@../image/delete_icon.png" />
+                     </image>
+                  </ImageView>
+                  <TableView fx:id="table" prefHeight="290.0" prefWidth="600.0">
+                    <columns>
+                      <TableColumn fx:id="sno" prefWidth="50.0" text="S.No." />
+                      <TableColumn fx:id="movieid" prefWidth="60.0" text="Movie ID" />
+                        <TableColumn fx:id="movie_title" minWidth="30.0" prefWidth="180.0" text="Movie Title" />
+                        <TableColumn fx:id="date1" prefWidth="100.0" text="Date" />
+                        <TableColumn fx:id="time1" prefWidth="95.0" text="Time" />
+                        <TableColumn fx:id="seats" prefWidth="112.0" text="Seats" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alienHut.SignupController">
+    <stylesheets>
+        <URL value="@signup.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #EDF5E1;">
+         <children>
+            <Label layoutX="172.0" layoutY="90.0" text="Username" textFill="#05386b">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="172.0" layoutY="136.0" text="Password" textFill="#05386b">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="signup_button" layoutX="268.0" layoutY="285.0" mnemonicParsing="false" onAction="#signupbutton" style="-fx-background-color: #5CDB95; -fx-text-fill: #05386B; -fx-font-weight: bold; -fx-font-size: 15; -fx-padding: 4 16;" text="Sign up" />
+            <Label layoutX="236.0" layoutY="340.0" text="Already a user?" textFill="#05386b">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="login_button" layoutX="323.0" layoutY="336.0" mnemonicParsing="false" onAction="#loginbutton" style="-fx-font-size: 13; -fx-font-family: System; -fx-font-weight: bold; -fx-background-color: transparent; -fx-cursor: hand; -fx-text-fill: #0000EE;" text="Log in" underline="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Label layoutX="172.0" layoutY="181.0" text="First Name" textFill="#05386b">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="172.0" layoutY="227.0" text="Last Name" textFill="#05386b">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username_tf" layoutX="255.0" layoutY="84.0" prefHeight="26.0" prefWidth="173.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-radius: 5; -fx-border-style: hidden hidden solid hidden; -fx-border-color: #b2b2b2;">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="firstname_tf" layoutX="255.0" layoutY="175.0" prefHeight="26.0" prefWidth="173.0" promptText="First Name" style="-fx-background-color: transparent; -fx-border-radius: 5; -fx-border-style: hidden hidden solid hidden; -fx-border-color: #b2b2b2;">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="lastname_tf" layoutX="255.0" layoutY="221.0" prefHeight="26.0" prefWidth="173.0" promptText="Last Name" style="-fx-background-color: transparent; -fx-border-radius: 5; -fx-border-style: hidden hidden solid hidden; -fx-border-color: #b2b2b2;">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="password_tf" layoutX="255.0" layoutY="130.0" prefHeight="26.0" prefWidth="173.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-radius: 5; -fx-border-style: hidden hidden solid hidden; -fx-border-color: #b2b2b2;">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </PasswordField>
+            <Label fx:id="error_lb" layoutX="240.0" layoutY="64.0" text="Invalid Username!!!" textAlignment="CENTER" textFill="#cf142b">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
